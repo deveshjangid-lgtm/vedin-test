@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Results | SkyHigh Airlines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SkyHigh Airlines</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Book</a></li>
+        </ul>
+    </nav>
+
+    <main class="results-container">
+        <h2>Available Flights</h2>
+        <div class="filters">
+            <button class="btn-secondary">Sort by Price</button>
+            <button class="btn-secondary">Sort by Duration</button>
+        </div>
+        
+        <div class="flight-list">
+            <div class="flight-card">
+                <div class="flight-info">
+                    <div class="time">10:00 AM - 1:30 PM</div>
+                    <div class="route">JFK -> LHR</div>
+                    <div class="duration">7h 30m • Non-stop</div>
+                </div>
+                <div class="flight-price">
+                    <h3>$450</h3>
+                    <button class="btn-primary" onclick="selectFlight()">Select</button>
+                </div>
+            </div>
+            <div class="flight-card">
+                <div class="flight-info">
+                    <div class="time">02:15 PM - 5:45 PM</div>
+                    <div class="route">JFK -> LHR</div>
+                    <div class="duration">7h 30m • Non-stop</div>
+                </div>
+                <div class="flight-price">
+                    <h3>$520</h3>
+                    <button class="btn-primary" onclick="selectFlight()">Select</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

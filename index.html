@@ -3,79 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devesh Cruise Line | Sail into Luxury</title>
+    <title>SkyHigh Airlines | Book Your Flight</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Elegant Typography from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">DEVESH CRUISE LINE</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#fleet">Our Fleet</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#status">Live Board</a></li>
-            </ul>
-        </nav>
-        <button class="btn-book">Book a Cruise</button>
+    <nav class="navbar">
+        <div class="logo">SkyHigh Airlines</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Book</a></li>
+            <li><a href="#">Manage Booking</a></li>
+            <li><a href="#">Check-In</a></li>
+            <li><a href="#">Flight Status</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content">
+            <h1>Let's Explore the World</h1>
+            <p>Book your next adventure today with premium comfort.</p>
+        </div>
+        
+        <div class="search-widget">
+            <form action="search.html" method="GET">
+                <div class="form-group">
+                    <label>From</label>
+                    <input type="text" placeholder="Departure City (e.g., JFK)" required>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <input type="text" placeholder="Arrival City (e.g., LHR)" required>
+                </div>
+                <div class="form-group">
+                    <label>Departure Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Passengers</label>
+                    <input type="number" min="1" value="1" required>
+                </div>
+                <button type="submit" class="btn-primary">Search Flights</button>
+            </form>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Sail into Luxury</h1>
-            <p>Experience the extraordinary with Devesh Cruise Line. Unmatched comfort, world-class dining, and breathtaking destinations await you.</p>
-            <a href="#status" class="btn-primary">View Live Onboard Status</a>
-        </div>
-    </section>
-
-    <section id="status" class="live-status">
-        <h2>Onboard Live Status</h2>
-        <div class="status-grid">
-            <div class="status-card">
-                <h3>Current Ship Time</h3>
-                <p id="ship-time" class="highlight-text">Loading...</p>
-                <span class="status-sub">Devesh Cruise Line Timezone</span>
-            </div>
-            <div class="status-card">
-                <h3>Next Port of Call</h3>
-                <p class="highlight-text">Nassau, Bahamas</p>
-                <span class="status-sub">ETA: Tomorrow, 8:00 AM</span>
-            </div>
-            <div class="status-card">
-                <h3>Current Speed</h3>
-                <p class="highlight-text">21 Knots &bull; SE</p>
-                <span class="status-sub">Smooth Sailing</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="destinations" class="destinations">
+    <section class="destinations">
         <h2>Popular Destinations</h2>
-        <div class="destination-grid">
-            <div class="dest-card">
-                <div class="dest-img caribbean"></div>
-                <div class="dest-info">
-                    <h3>Caribbean Escape</h3>
-                    <p>7 Nights of pristine beaches and crystal-clear waters.</p>
-                </div>
+        <div class="dest-grid">
+            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=400&q=80');">
+                <h3>Paris</h3>
             </div>
-            <div class="dest-card">
-                <div class="dest-img mediterranean"></div>
-                <div class="dest-info">
-                    <h3>Mediterranean Wonders</h3>
-                    <p>10 Nights exploring the rich history of Europe's majestic coastlines.</p>
-                </div>
+            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&q=80');">
+                <h3>London</h3>
+            </div>
+            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=400&q=80');">
+                <h3>Tokyo</h3>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Devesh Cruise Line. All rights reserved. | Luxury Redefined</p>
+        <p>&copy; 2026 SkyHigh Airlines. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
