@@ -1,9 +1,81 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>GitLab Test</title>
-<link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devesh Cruise Line | Sail into Luxury</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Elegant Typography from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>GitLab Test Project</h1>
-<p>If you can see this page, the project is working.</p>
-<button id="btn">Click Me</button>
-<script src="script.js"></script>
-</body></html>
+    <header>
+        <div class="logo">DEVESH CRUISE LINE</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fleet">Our Fleet</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#status">Live Board</a></li>
+            </ul>
+        </nav>
+        <button class="btn-book">Book a Cruise</button>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Sail into Luxury</h1>
+            <p>Experience the extraordinary with Devesh Cruise Line. Unmatched comfort, world-class dining, and breathtaking destinations await you.</p>
+            <a href="#status" class="btn-primary">View Live Onboard Status</a>
+        </div>
+    </section>
+
+    <section id="status" class="live-status">
+        <h2>Onboard Live Status</h2>
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>Current Ship Time</h3>
+                <p id="ship-time" class="highlight-text">Loading...</p>
+                <span class="status-sub">Devesh Cruise Line Timezone</span>
+            </div>
+            <div class="status-card">
+                <h3>Next Port of Call</h3>
+                <p class="highlight-text">Nassau, Bahamas</p>
+                <span class="status-sub">ETA: Tomorrow, 8:00 AM</span>
+            </div>
+            <div class="status-card">
+                <h3>Current Speed</h3>
+                <p class="highlight-text">21 Knots &bull; SE</p>
+                <span class="status-sub">Smooth Sailing</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="dest-card">
+                <div class="dest-img caribbean"></div>
+                <div class="dest-info">
+                    <h3>Caribbean Escape</h3>
+                    <p>7 Nights of pristine beaches and crystal-clear waters.</p>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img mediterranean"></div>
+                <div class="dest-info">
+                    <h3>Mediterranean Wonders</h3>
+                    <p>10 Nights exploring the rich history of Europe's majestic coastlines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Devesh Cruise Line. All rights reserved. | Luxury Redefined</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
