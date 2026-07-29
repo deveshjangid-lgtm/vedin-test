@@ -1,17 +1,35 @@
-// Basic interaction script for the Airline Booking System
+// Scroll Animations
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
 
-function selectFlight() {
-    alert("Flight selected! Redirecting to fare details and seat selection...");
-    // Future implementation: window.location.href = 'fare-details.html';
+    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+});
+
+// Modal Logic
+function openFareDetails() {
+    const modal = document.getElementById('fareModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Add logic to handle search form submission
-    const searchForm = document.querySelector('form');
-    if (searchForm) {
-        searchForm.addEventListener('submit', (e) => {
-            // Let the form naturally redirect to search.html for now
-            console.log("Searching for flights...");
-        });
+function closeFareDetails() {
+    const modal = document.getElementById('fareModal');
+    if (modal) {
+        modal.style.display = 'none';
     }
-});
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('fareModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
