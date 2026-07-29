@@ -3,133 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Results | VedinAir</title>
+    <title>Flight Search Results - VedinAir</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <!-- Header Minimal -->
-    <header class="navbar navbar-dark">
-        <div class="logo"><a href="index.html" style="color:white; text-decoration:none;"><i class="fa-solid fa-plane-departure"></i> VedinAir</a></div>
-        <div class="search-summary glassmorphism-dark">
-            <span><i class="fa-solid fa-plane"></i> JFK &rarr; LHR</span> | 
-            <span>15 Aug - 22 Aug</span> | 
-            <span>1 Passenger</span>
-            <button class="btn-outline-small">Modify</button>
-        </div>
+<body>
+    <header class="navbar solid">
+        <div class="logo">VedinAir</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="search-container section-padding">
-        <!-- Sidebar Filters -->
-        <aside class="filters slide-in-left">
-            <h3>Filters</h3>
-            <div class="filter-group">
-                <h4>Stops</h4>
-                <label><input type="checkbox" checked> Non-stop</label>
-                <label><input type="checkbox"> 1 Stop</label>
-            </div>
-            <div class="filter-group">
-                <h4>Departure Time</h4>
-                <label><input type="checkbox"> Morning (06:00 - 11:59)</label>
-                <label><input type="checkbox"> Afternoon (12:00 - 17:59)</label>
-            </div>
-            <div class="filter-group">
-                <h4>Airlines</h4>
-                <label><input type="checkbox" checked> VedinAir Express</label>
-                <label><input type="checkbox" checked> VedinAir Premium</label>
-            </div>
-        </aside>
-
-        <!-- Flight Results List -->
-        <section class="flight-results">
-            <!-- Flight Card 1 -->
-            <div class="flight-card fade-in-up" style="animation-delay: 0.1s;">
-                <div class="airline-info">
-                    <img src="https://ui-avatars.com/api/?name=VA&background=0D8ABC&color=fff&rounded=true" alt="VA Logo" class="airline-logo">
-                    <span class="airline-name">VedinAir Premium</span>
-                </div>
-                <div class="flight-times">
-                    <div class="time-block">
-                        <span class="time">08:00</span>
-                        <span class="airport">JFK</span>
-                    </div>
-                    <div class="flight-duration">
-                        <span class="duration-text">7h 15m</span>
-                        <div class="duration-line"><i class="fa-solid fa-plane"></i></div>
-                        <span class="stops">Direct</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time">20:15</span>
-                        <span class="airport">LHR</span>
-                    </div>
-                </div>
-                <div class="flight-price-action">
-                    <div class="price">
-                        <span class="currency">$</span><span class="amount">450</span>
-                    </div>
-                    <button class="btn-primary" onclick="openFareDetails()">Select</button>
-                </div>
-            </div>
-
-            <!-- Flight Card 2 -->
-            <div class="flight-card fade-in-up" style="animation-delay: 0.2s;">
-                <div class="airline-info">
-                    <img src="https://ui-avatars.com/api/?name=VA&background=0D8ABC&color=fff&rounded=true" alt="VA Logo" class="airline-logo">
-                        <span class="airline-name">VedinAir Express</span>
-                </div>
-                <div class="flight-times">
-                    <div class="time-block">
-                        <span class="time">14:30</span>
-                        <span class="airport">JFK</span>
-                    </div>
-                    <div class="flight-duration">
-                        <span class="duration-text">7h 00m</span>
-                        <div class="duration-line"><i class="fa-solid fa-plane"></i></div>
-                        <span class="stops">Direct</span>
-                    </div>
-                    <div class="time-block">
-                        <span class="time">02:30</span>
-                        <span class="airport">LHR<br><small class="next-day">+1 Day</small></span>
-                    </div>
-                </div>
-                <div class="flight-price-action">
-                    <div class="price">
-                        <span class="currency">$</span><span class="amount">390</span>
-                    </div>
-                    <button class="btn-primary" onclick="openFareDetails()">Select</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Fare Details Modal (Hidden by default) -->
-    <div id="fareModal" class="modal">
-        <div class="modal-content scale-in">
-            <span class="close" onclick="closeFareDetails()">&times;</span>
-            <h2>Fare Details</h2>
-            <div class="fare-options">
-                <div class="fare-box">
-                    <h3>Economy Basic</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Cabin Baggage (7kg)</li>
-                        <li><i class="fa-solid fa-xmark" style="color:red"></i> Check-in Baggage</li>
-                        <li><i class="fa-solid fa-xmark" style="color:red"></i> Seat Selection</li>
-                    </ul>
-                    <button class="btn-outline">Keep Basic</button>
-                </div>
-                <div class="fare-box premium-box">
-                    <h3>Economy Standard</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Cabin Baggage (7kg)</li>
-                        <li><i class="fa-solid fa-check"></i> Check-in Baggage (23kg)</li>
-                        <li><i class="fa-solid fa-check"></i> Seat Selection</li>
-                    </ul>
-                    <button class="btn-primary">Add for $60</button>
-                </div>
-            </div>
+    <section class="results-container">
+        <h2 class="section-title">Available Flights</h2>
+        <div id="search-info" class="search-info">
+            <!-- Will be populated by JS -->
         </div>
-    </div>
+        <div id="flights-list" class="flights-list">
+            <div class="loader">Fetching live flight data...</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VedinAir. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            handleFlightSearch();
+        });
+    </script>
 </body>
 </html>
